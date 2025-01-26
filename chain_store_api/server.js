@@ -7,7 +7,7 @@ app.get('/komeda_stores', (req, res) => {
   fs.readFile('stores.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send('サーバーエラーです');
       return;
     }
     try {
