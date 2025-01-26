@@ -20,6 +20,11 @@ app.get('/komeda_stores', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+    res.send('ようこそ、コメダ珈琲店APIへ！');
+  });
+
+
 app.get('/stores/:id', (req, res) => {
   const storeId = parseInt(req.params.id);
   fs.readFile('stores.json', 'utf8', (err, data) => {
